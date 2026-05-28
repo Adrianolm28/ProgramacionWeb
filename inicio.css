@@ -125,3 +125,104 @@ body {
     margin-top: 20px;
     display: inline-block;
 }
+
+/* --- NUEVOS ESTILOS PARA CUMPLIR EL CHECKLIST --- */
+
+/* Navegación fluida */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navegación fija superior */
+.navegacion {
+    position: sticky;
+    top: 0;
+    background-color: rgba(252, 250, 248, 0.95); 
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+/* Efectos visuales, transformaciones y transiciones suaves */
+.celda {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.celda:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.boton-claro {
+    transition: all 0.3s ease;
+}
+
+.boton-claro:hover {
+    transform: scale(1.05);
+}
+
+/* Animaciones con @keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar-entrada {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Estilos para el Footer */
+.pie-pagina {
+    background-color: #2c1e16;
+    color: #fcfaf8;
+    text-align: center;
+    padding: 40px 5%;
+    margin-top: 50px;
+}
+
+.pie-pagina ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.pie-pagina a {
+    color: #fcfaf8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pie-pagina a:hover {
+    color: #a89485;
+}
+
+/* Diseño responsivo con Media Queries */
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 5%;
+    }
+    
+    .presentacion h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tabla-datos {
+        flex-direction: column;
+    }
+    
+    .celda {
+        border-right: none;
+        border-bottom: 1px solid #2c1e16;
+    }
+}
