@@ -46,7 +46,7 @@ html {
 }
 
 .portada {
-    background-image: url("https://adrianolm28.github.io/ProgramacionWeb/imagenes/image-ban.png");
+    background-image: url("../imagenes/image-ban.png");
     background-repeat: no-repeat;
     background-size: cover; 
     height: 70vh;
